@@ -41,7 +41,7 @@ The .csenv looks like the following:
 ```
 
 You can now simply get your values like:
-```json
+```cs
 Env env = EnvironmentManager.GetEnv("Car.Parking"); // It doesn't matter whether we include the name or not
 Console.WriteLine(env.GetAttribute<CarStruct[]>("cars")[0].Model);
 ```
