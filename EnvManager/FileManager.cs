@@ -5,7 +5,7 @@ namespace EnvManager;
 
 internal static class FileManager {
     private static readonly object Lock = new();
-    private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true, IncludeFields = false };
+    private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true, IncludeFields = true };
     
     private static string GetEnvPath() {
         string path = Path.Combine(Path.GetDirectoryName(AppContext.BaseDirectory)!, ".csenv");
