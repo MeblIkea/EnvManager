@@ -1,6 +1,6 @@
 ﻿namespace EnvManager;
 
-public static class EnvManager {
+public static class EnvironmentManager {
     /// <summary>
     /// Function to get (or create) an environment in the .csenv file.
     /// <para>This function is to set/get on the global environment.</para>

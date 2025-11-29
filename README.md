@@ -19,7 +19,7 @@ CarStruct car = new() {
     Brand = "Renault",
     Model = "Twingo"
 };
-Env parkingEnv = EnvManager.EnvManager.GetEnv("Car.Parking", "Parking Manager"); // Name is just a description for the JSON
+Env parkingEnv = EnvironmentManager.GetEnv("Car.Parking", "Parking Manager"); // Name is just a description for the JSON
 parkingEnv.SetAttribute("cars", new[] {car});
 ```
 The .csenv looks like the following:
@@ -42,7 +42,7 @@ The .csenv looks like the following:
 
 You can now simply get your values like:
 ```json
-Env env = EnvManager.EnvManager.GetEnv("Car.Parking"); // It doesn't matter whether we include the name or not
+Env env = EnvironmentManager.GetEnv("Car.Parking"); // It doesn't matter whether we include the name or not
 Console.WriteLine(env.GetAttribute<CarStruct[]>("cars")[0].Model);
 ```
 <br>*So technically, all you would ever need for prods is to get the envs, as it's not designed to save values dynamically.* 
